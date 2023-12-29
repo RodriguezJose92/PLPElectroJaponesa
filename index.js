@@ -2,8 +2,8 @@ let flags = document.querySelectorAll('.realidad-aumentada');
 let counter = 0
 
 const intervalo = setInterval(()=>{
-    if(counter==10)clearInterval(intervalo)
-    else if (!flags) counter++; 
+    if(counter==10){clearInterval(intervalo)}
+    else if (!flags) {counter++; }
     else {
         let parentElement = null;
 
