@@ -1,7 +1,9 @@
 let flags = document.querySelectorAll('.realidad-aumentada');
 let counter = 0
+console.log('flag one: '+flags);
 
 const intervalo = setInterval(()=>{
+    
     if(counter==10){clearInterval(intervalo)}
     else if (!flags) {counter++; }
     else {
@@ -14,6 +16,9 @@ const intervalo = setInterval(()=>{
 
         clearInterval(intervalo);
 
-    }
+    };
+
+    console.log('flag two: '+flags);
+
 },1000)
 
