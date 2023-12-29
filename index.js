@@ -2,8 +2,8 @@ let flags = document.querySelectorAll('.realidad-aumentada');
 let counter = 0
 
 const intervalo = setInterval(()=>{
-    if(counter==10){clearInterval(intervalo) ; console.log('limpie el intervalo')}
-    else if (!flags) {counter++; console.log('sigo buscando el contenedor')}
+    if(counter==10)clearInterval(intervalo)
+    else if (!flags) counter++; 
     else {
         let parentElement = null;
 
@@ -12,7 +12,7 @@ const intervalo = setInterval(()=>{
             parentElement.appendChild(flags[i])
         }
 
-        console.log('hecho')
+        clearInterval(intervalo);
 
     }
 },1000)
