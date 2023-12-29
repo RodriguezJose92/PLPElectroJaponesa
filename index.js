@@ -1,11 +1,8 @@
 let flags = document.querySelectorAll('.realidad-aumentada');
-let counter = 0
-console.log('flag one: '+flags);
-
+let counter = 0;
 const intervalo = setInterval(()=>{
-    
-    if(counter==10){clearInterval(intervalo)}
-    else if (!flags) {counter++; }
+    if( counter==10 ){clearInterval(intervalo)}
+    else if ( flags.length==0 ) { counter++; flags = document.querySelectorAll('.realidad-aumentada');}
     else {
         let parentElement = null;
 
@@ -13,12 +10,7 @@ const intervalo = setInterval(()=>{
             parentElement =  flags[i].parentNode.parentNode.querySelector('.vitrin-home .img_p')
             parentElement.appendChild(flags[i])
         }
-
         clearInterval(intervalo);
-
     };
-
-    console.log('flag two: '+flags);
-
-},1000)
+},1000);
 
