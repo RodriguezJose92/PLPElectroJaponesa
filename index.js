@@ -25,7 +25,7 @@ function verifyTagAR(){
 verifyTagAR()
 
 // Asociamos un evento a la lista de paginación para que la verificacion de las etiquetas AR también suceda aquí en esta sección 
-const paginationList = document.querySelectorAll('.page-number');
+let paginationList = document.querySelectorAll('.page-number');
 let intervalo1 = setInterval(()=>{
     if(paginationList.length==0){
         paginationList = document.querySelectorAll('.page-number');
