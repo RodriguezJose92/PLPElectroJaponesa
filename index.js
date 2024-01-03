@@ -19,7 +19,10 @@ let paginationList = document.querySelectorAll('.page-number');
 let counterPagination = 0;
 
 const intervalPagination = setInterval(()=>{
-    if(counterPagination==10){clearInterval(intervalPagination); console.log('limpiado por llegar a 10)}
+    if(counterPagination==10){ 
+        clearInterval(intervalPagination); 
+        console.log('limpiado por llegar a 10')
+    }
     else if( paginationList.length==0){
         counterPagination++;
         paginationList = document.querySelectorAll('.page-number');
